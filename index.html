@@ -3,32 +3,41 @@
     <head>
         <title>My HTML Page</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/index.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/index.css">
     </head>
 
     <body>
+        <nav id="header-nav">
+            <ul id="header-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#connect">Connect</a></li>
+            </ul>
+        </nav>
         <main id="main">
             <h1>Eduaina Ighalo</h1>
             <section id="about">
                <div id="abt1">
-                 <h2 id="h2">About</h2>
+                 <h2>About</h2>
                     <p>Hi! I'm <strong><em>Eduaina!</em></strong> <br> 
                         A <strong>Frontend developer</strong> currently <em>in training</em> with the Code the dream(CTD) program.</p>
                     <p>Feel free to connect and send a dm on Instagram</p>
                </div>
                <div id="abt2">
-                    <img src="https://eduainacom.vercel.app/assets/images/siting.jpg" alt="A picture of Eduaina Ighalo">
+                    <img src="https://eduainacom.vercel.app/assets/images/siting.jpg" alt="A picture of Eduaina Ighalo" id="profile-pic">
                 </div>
             </section>
 
             <section id="experience">
-                <h2 id="h2">Experience</h2>
+                <h2>Experience</h2>
                 <nav id="experience-nav">
-                    <ul>
+                    <ul id="exp-ul">
                         <li>HTML</li>
                         <li>CSS</li>
                         <li>Javascript</li>
@@ -38,12 +47,22 @@
                 </nav>
             </section>
 
+            <section id="skills">
+                <h2>Skills</h2>
+            </section>
+
+            <section id="projects">
+                <h2>Projects</h2>
+                <ul></ul>
+            </section>
+
             <section id="connect">
-                <h2 id="h2">Connect</h2>
+                <h2>Connect</h2>
                 <nav>
                     <ul>
-                        <li><a href="https://github.com/Eduaina" target="_blank">Github</a></li>
-                        <li><a href="https://www.instagram.com/bre_edua/" target="_blank">Instagram</a></li>
+                        <li><a href="https://github.com/Eduaina" target="_blank"><img src="images/github.png" alt="Github" class="icon"></img></a></li>
+                        <li><a href="https://www.instagram.com/bre_edua/" target="_blank"><img src="images/instagram.png" alt="Instagram" class="icon"></a></li>
+                        <li><a href="https://x.com/Edua_dev" target="_blank"><img src="images/twitter.png" alt="X(Twitter)" class="icon"></a></li>
                     </ul>
                 </nav>
            </section>

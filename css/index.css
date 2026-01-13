@@ -15,6 +15,30 @@ body {
     letter-spacing: 1.2px;
 }
 
+#header-nav{
+    border: 2px solid #cd5d8aa7;
+    margin: 10px;
+    top: 0;
+    position: sticky;
+    background-color: #004b84;
+}
+
+#header-list {
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    font-size: 20px;
+}
+
+#header-list li a {
+    color:#d0a5b6;
+    text-decoration: none;
+}
+
+#header-list li a:hover {
+    color: #59b596;
+}
+
 h1 {
     color: #ed77a6;
     font-size: 40px;
@@ -47,11 +71,10 @@ h2:hover {
     justify-content: space-evenly;
 }
 
-#abt2 img {
-    /* width: 500px; */
-    height: 400px;
-    margin-top: 20px;
-    object-fit: contain;
+#profile-pic {
+    width: 30vw;
+    height: 60vh;
+    object-fit: fill;
 }
 
 p {
@@ -65,5 +88,42 @@ strong {
 }
 
 #experience {
+    margin: 20px;
+}
+
+ul li {
+    list-style: none;
+}
+
+#exp-ul {
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* width: 80%; */
+    height: 40vh;
+    margin-top: 40px;
+    /* grid-template-rows: 100px 100px; */
+    gap: 10px;
+}
+
+#exp-ul li {
+    border: 2px solid #ed77a6;
+    align-content: center;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#connect ul {
+    display: flex;
+    gap: 10px;
+}
+
+#connect li a {
+    color:#cd5d8a;
+    text-decoration: none;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+    background-color: white;
 }
