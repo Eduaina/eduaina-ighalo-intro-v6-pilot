@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #edfcff;
 }
 
 #main {
@@ -13,6 +14,8 @@ body {
     flex-direction: column;
     line-height: 1.5;
     letter-spacing: 1.2px;
+    padding: 20px;
+    font-size: 18px;
 }
 
 #header-nav{
@@ -28,6 +31,10 @@ body {
     gap: 10px;
     justify-content: space-evenly;
     font-size: 20px;
+}
+
+ul li {
+    list-style: none;
 }
 
 #header-list li a {
@@ -54,7 +61,7 @@ h1 {
 h2 {
     color: #cd5d8a;
     font-size: 30px;
-    margin: 20px;
+    margin: 20px 0 40px;
     text-align: center;
     font-weight: 700;
 }
@@ -66,15 +73,24 @@ h2:hover {
 
 #about{
     display: flex;
-    margin: 20px;
+    margin: 5px 10px 20px;
     padding: 20px;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+#abt1 {
+    flex: 2;
+}
+
+#abt2 {
+    flex: 1;
 }
 
 #profile-pic {
     width: 30vw;
     height: 60vh;
-    object-fit: fill;
+    object-fit: cover;
 }
 
 p {
@@ -90,26 +106,27 @@ strong {
 #experience {
     margin: 20px;
 }
-
-ul li {
-    list-style: none;
-}
-
+ 
 #exp-ul {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* width: 80%; */
-    height: 40vh;
     margin-top: 40px;
     /* grid-template-rows: 100px 100px; */
     gap: 10px;
 }
 
+.date {
+    font-weight: 300;
+    color: #e5afc4;
+}
+
 #exp-ul li {
-    border: 2px solid #ed77a6;
-    align-content: center;
-    text-align: center;
-    text-transform: uppercase;
+    list-style: circle;
+    padding-bottom: 10px;
+}
+
+#skills-section li {
+  list-style-type: circle;
+  margin: 0px 15px;
+  padding: 0px 0 10px;
 }
 
 #connect ul {
@@ -126,4 +143,8 @@ ul li {
     width: 30px;
     height: 30px;
     background-color: white;
+}
+
+section:hover {
+    border: 2px solid #59b596;
 }
