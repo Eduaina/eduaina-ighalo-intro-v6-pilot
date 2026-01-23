@@ -41,3 +41,24 @@ for (let i = 0; i < skills.length; i++) {
   skill.textContent = skills[i];
   skillsList.appendChild(skill);
 }
+
+//Handle Message Form Submit
+const messageForm = document.querySelector('form[name="leave_message"]');
+messageForm.addEventListener('submit', (e) => {
+  console.log('Form sunmitted')
+  e.preventDefault();
+  let formName = e.target.usersName.value;
+  let formEmail = e.target.usersEmail;
+  let formMessage = e.target.usersMessage;
+
+  console.log(formName, formEmail, formMessage);
+  const messageSection = document.getElementById('messages');
+  const messageList = messageSection.querySelector('ul');
+  const newMessage = document.createElement('li');
+
+
+  messageForm.reset();
+})
+
+
+//Display Messages in List
