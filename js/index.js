@@ -17,20 +17,20 @@ newFooter.appendChild(copyright);
 
 //Create List of Skills
 const skills = [
-      "HTML5 (Semantic Markup)",
-      "CSS3 (Flexbox, Grid, Responsive Design)",
-      "JavaScript (ES6+)",
-      "React",
-      "Component-Based Development",
-      "Basic State Management",
-      "Git",
-      "GitHub",
-      "npm",
-      "Vite",
-      "Browser DevTools",
-      "Advanced JavaScript Concepts",
-      "React Best Practices",
-      "Backend Fundamentals"
+    "HTML5 (Semantic Markup)",
+    "CSS3 (Flexbox, Grid, Responsive Design)",
+    "JavaScript (ES6+)",
+    "React",
+    "Component-Based Development",
+    "Basic State Management",
+    "Git",
+    "GitHub",
+    "npm",
+    "Vite",
+    "Browser DevTools",
+    "Advanced JavaScript Concepts",
+    "React Best Practices",
+    "Backend Fundamentals"
 ];
 
 const skillsSection = document.getElementById('skills');
@@ -62,3 +62,4 @@ messageForm.addEventListener('submit', (e) => {
 
 
 //Display Messages in List
+
