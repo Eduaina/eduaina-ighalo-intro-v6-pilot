@@ -80,19 +80,20 @@
 
         <section id="message-form">
             <h2>Leave a Message</h2>
-            <form name="leave_message">
-                <label for="name"></label>
-                <input type="text" name="usersName" id="name" placeholder="Fullname" required/> 
-                <label for="email"></label>
-                <input type="email" name="usersEmail" id="email" placeholder="Email" required/>
-                <textarea name="usersMessage" placeholder="Your message goes here....." required></textarea>
+            <form name="leave_message" autocomplete="on">
+                <label for="name">Username: </label>
+                <input type="text" name="usersName" id="name" required="true" autocomplete="on"> 
+                <label for="email">Email: </label>
+                <input type="email" name="usersEmail" id="email" required  autocomplete="on"/>
+                <label for="usersMessage">Message: </label>
+                <textarea name="usersMessage" id="usersMessage" required></textarea>
                 <button type="submit">Submit</button>
             </form>
         </section>
 
         <section id="messages">
             <h2>Messages</h2>
-            <ul></ul>
+            <ul class="js-created"></ul>
         </section>
 
         <script src="js/index.js"></script>

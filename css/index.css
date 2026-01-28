@@ -168,12 +168,14 @@ strong {
     display: flex;
     flex-direction: column;
     padding: 20px 0 35px 0;
+    justify-content: center;
+    align-items: center;
 }
 
 form[name ='leave_message'] {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     gap: 15px;
     font-size: 18px;
 }
@@ -198,7 +200,7 @@ button[type="submit"] {
     /* padding: 20px; */
     border-radius: 5px;
     font-size: 18px;
-    /* margin: 0 auto; */
+    margin-top: 40px;
     background-color: cornflowerblue;
 }
 
@@ -208,6 +210,62 @@ button:hover {
 
 button:active {
     color: #59b596;
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.js-created {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.js-created li {
+  background-color: rgba(15, 14, 14, 0.056);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.js-created li a {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-weight: 700;
+  color: #ed77a6;
+  text-decoration: none;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.js-created li button {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: transparent;
+  border: 1px solid #cd5d8a;
+  color: #cd5d8a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.js-created li span {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  color: #edfcff;
+  line-height: 1.4;
+  font-size: 18px;
 }
 
 section:hover, footer:hover {
