@@ -6,13 +6,13 @@ document.body.append(footer);
 //Insert Copyright Text in Footer
 const today = new Date();
 const thisYear = today.getFullYear();
-const newFooter = document.querySelector('.footer');
+// const newFooter = document.querySelector('.footer');
 const copyright = document.createElement('p');
 const copyrightSymbol = "\u00A9"
 const name = `Eduaina Ighalo`
 copyright.innerHTML = `${copyrightSymbol} ${name} ${thisYear}`;
 
-newFooter.appendChild(copyright);
+footer.appendChild(copyright);
 
 
 //Create List of Skills
@@ -45,21 +45,30 @@ for (let i = 0; i < skills.length; i++) {
 //Handle Message Form Submit
 const messageForm = document.querySelector('form[name="leave_message"]');
 messageForm.addEventListener('submit', (e) => {
-  console.log('Form sunmitted')
   e.preventDefault();
   let formName = e.target.usersName.value;
-  let formEmail = e.target.usersEmail;
-  let formMessage = e.target.usersMessage;
+  let formEmail = e.target.usersEmail.value;
+  let formMessage = e.target.usersMessage.value;
 
   console.log(formName, formEmail, formMessage);
+
   const messageSection = document.getElementById('messages');
   const messageList = messageSection.querySelector('ul');
   const newMessage = document.createElement('li');
+  newMessage.innerHTML = `<a href="mailto: ${formEmail}">${formName}</a> <span>${formMessage}</span>`
+  console.log(newMessage);
 
+  const removeButton = document.createElement('button');
+  removeButton.innerText = 'Remove';
+  const att = document.createAttribute('type');
+  att.value = 'button';
+  removeButton.setAttributeNode(att);
+
+  console.log(removeButton)
+
+  removeButton.addEventListener('click', (event) => {
+    // const entry = 
+  })
 
   messageForm.reset();
 })
-
-
-//Display Messages in List
-
