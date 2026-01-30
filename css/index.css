@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box; 
+}
+
 body {
     background-color: #004b84;
     margin: 0;
@@ -109,13 +113,19 @@ strong {
  
 #exp-ul {
     margin-top: 40px;
-    /* grid-template-rows: 100px 100px; */
-    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+#exp-ul li:nth-child(1) {
+    font-size: 20px;
+    color: #e5afc4;
+    font-weight: 700;
+    list-style: none;
 }
 
 .date {
     font-weight: 300;
-    color: #e5afc4;
 }
 
 #exp-ul li {
@@ -123,10 +133,19 @@ strong {
     padding-bottom: 10px;
 }
 
+#skills-section {
+    display: flex;
+    flex-direction: column;
+}
+
 #skills-section li {
   list-style-type: circle;
   margin: 0px 15px;
   padding: 0px 0 10px;
+}
+
+#skills-section li:hover {
+    color: aquamarine;
 }
 
 #connect ul {
@@ -145,6 +164,110 @@ strong {
     background-color: white;
 }
 
-section:hover {
+#message-form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0 35px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+form[name ='leave_message'] {
+    display: flex;
+    flex-direction: column;
+    /* margin: 0 auto; */
+    gap: 15px;
+    font-size: 18px;
+}
+
+form[name ='leave_message'] input {
+    width: 50vw;
+    height: 60px;
+    border-radius: 10px;
+    padding: 0 0 0 20px;
+}
+
+form[name ='leave_message'] textarea {
+    width: 60vw;
+    height: 80px;
+    border-radius: 10px;
+    padding: 20px 0 0 20px;
+}
+
+button[type="submit"] {
+    width: 130px;
+    height: 50px;
+    /* padding: 20px; */
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 40px;
+    background-color: cornflowerblue;
+}
+
+button:hover {
+    background-color: #a3b1bc;
+}
+
+button:active {
+    color: #59b596;
+}
+
+#messages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.js-created {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.js-created li {
+  background-color: rgba(15, 14, 14, 0.056);
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 10px 10px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 10px;
+}
+
+.js-created li a {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  font-weight: 700;
+  color: #ed77a6;
+  text-decoration: none;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.js-created li button {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  background-color: transparent;
+  border: 1px solid #cd5d8a;
+  color: #cd5d8a;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.js-created li span {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  color: #edfcff;
+  line-height: 1.4;
+  font-size: 18px;
+}
+
+section:hover, footer:hover {
     border: 2px solid #59b596;
 }

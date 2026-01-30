@@ -6,31 +6,31 @@ document.body.append(footer);
 //Insert Copyright Text in Footer
 const today = new Date();
 const thisYear = today.getFullYear();
-const newFooter = document.querySelector('.footer');
+// const newFooter = document.querySelector('.footer');
 const copyright = document.createElement('p');
 const copyrightSymbol = "\u00A9"
 const name = `Eduaina Ighalo`
 copyright.innerHTML = `${copyrightSymbol} ${name} ${thisYear}`;
 
-newFooter.appendChild(copyright);
+footer.appendChild(copyright);
 
 
 //Create List of Skills
 const skills = [
-      "HTML5 (Semantic Markup)",
-      "CSS3 (Flexbox, Grid, Responsive Design)",
-      "JavaScript (ES6+)",
-      "React",
-      "Component-Based Development",
-      "Basic State Management",
-      "Git",
-      "GitHub",
-      "npm",
-      "Vite",
-      "Browser DevTools",
-      "Advanced JavaScript Concepts",
-      "React Best Practices",
-      "Backend Fundamentals"
+    "HTML5 (Semantic Markup)",
+    "CSS3 (Flexbox, Grid, Responsive Design)",
+    "JavaScript (ES6+)",
+    "React",
+    "Component-Based Development",
+    "Basic State Management",
+    "Git",
+    "GitHub",
+    "npm",
+    "Vite",
+    "Browser DevTools",
+    "Advanced JavaScript Concepts",
+    "React Best Practices",
+    "Backend Fundamentals"
 ];
 
 const skillsSection = document.getElementById('skills');
@@ -41,3 +41,43 @@ for (let i = 0; i < skills.length; i++) {
   skill.textContent = skills[i];
   skillsList.appendChild(skill);
 }
+
+//Handle Message Form Submit
+const messageForm = document.querySelector('form[name="leave_message"]');
+messageForm.addEventListener('submit', (e) => {
+  console.log('Form Submitted')
+  e.preventDefault();
+  let formName = e.target.usersName.value;
+  let formEmail = e.target.usersEmail.value;
+  let formMessage = e.target.usersMessage.value;
+
+  console.log(formName);
+  console.log(formEmail);
+  console.log(formMessage);
+
+
+  const messageSection = document.getElementById('messages');
+  const messageList = messageSection.querySelector('ul');
+  const newMessage = document.createElement('li');
+  newMessage.innerHTML = `<a href="mailto:${formEmail}">${formName}: </a> <span>${formMessage}</span>`
+  console.log(newMessage);
+
+  const removeButton = document.createElement('button');
+  removeButton.innerText = 'Remove';
+  const att = document.createAttribute('type');
+  att.value = 'button';
+  removeButton.setAttributeNode(att);
+
+  console.log(removeButton)
+
+  removeButton.addEventListener('click', (event) => {
+    const entry = event.target.parentNode;
+    entry.remove();
+  })
+
+  newMessage.appendChild(removeButton);
+  messageList.appendChild(newMessage);
+
+
+  messageForm.reset();
+})

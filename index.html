@@ -18,6 +18,7 @@
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#connect">Connect</a></li>
+                <li><a href="#message-form">Leave a Message</a></li>
             </ul>
         </nav>
         <main id="main">
@@ -43,8 +44,8 @@
                 <h2>Experience</h2>
                 <nav id="experience-nav">
                     <ul id="exp-ul">
-                         <h4>Front-End Development (Project-Based Learning) <br>
-                        <em class="date">2024 – Present</em></h4>
+                        <li>Front-End Development (Project-Based Learning) <br>
+                            <em class="date">2024 – Present</em></li> <br>
                         <li>Building responsive layouts using HTML, CSS, Flexbox, and Grid</li>
                         <li>Creating interactive features with vanilla JavaScript</li>
                         <li>Learning React fundamentals: components, props, state, and hooks</li>
@@ -76,6 +77,24 @@
                 </nav>
            </section>
         </main>
+
+        <section id="message-form">
+            <h2>Leave a Message</h2>
+            <form name="leave_message" autocomplete="on">
+                <label for="name">Username: </label>
+                <input type="text" name="usersName" id="name" required="true" autocomplete="on"> 
+                <label for="email">Email: </label>
+                <input type="email" name="usersEmail" id="email" required  autocomplete="on"/>
+                <label for="usersMessage">Message: </label>
+                <textarea name="usersMessage" id="usersMessage" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section id="messages">
+            <h2>Messages</h2>
+            <ul class="js-created"></ul>
+        </section>
 
         <script src="js/index.js"></script>
     </body>
