@@ -47,26 +47,27 @@ const messageForm = document.querySelector('form[name="leave_message"]');
 messageForm.addEventListener('submit', (e) => {
   console.log('Form Submitted')
   e.preventDefault();
-  let formName = e.target.usersName.value;
-  let formEmail = e.target.usersEmail.value;
-  let formMessage = e.target.usersMessage.value;
+  let userName = e.target.usersName.value;
+  let userEmail = e.target.usersEmail.value;
+  let userMessage = e.target.usersMessage.value;
 
-  console.log(formName);
-  console.log(formEmail);
-  console.log(formMessage);
+  console.log(userName);
+  console.log(userEmail);
+  console.log(userMessage);
 
 
   const messageSection = document.getElementById('messages');
   const messageList = messageSection.querySelector('ul');
   const newMessage = document.createElement('li');
-  newMessage.innerHTML = `<a href="mailto:${formEmail}">${formName}: </a> <span>${formMessage}</span>`
+  newMessage.innerHTML = `<a href="mailto:${userEmail}">${userName}: </a> <span>${userMessage}</span>`
   console.log(newMessage);
 
   const removeButton = document.createElement('button');
   removeButton.innerText = 'Remove';
-  const att = document.createAttribute('type');
-  att.value = 'button';
-  removeButton.setAttributeNode(att);
+  // const att = document.createAttribute('type');
+  // att.value = 'button';
+  // removeButton.setAttributeNode(att);
+  removeButton.setAttribute("type", "button");
 
   console.log(removeButton)
 
