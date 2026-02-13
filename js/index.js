@@ -83,7 +83,7 @@ messageForm.addEventListener('submit', (e) => {
   messageForm.reset();
 })
 
-//Getting my Github User name
+// Displaying my Github projects in my projects section
   const usernameURL = 'https://api.github.com/users/Eduaina/repos';
 
   fetch(usernameURL)
@@ -96,7 +96,7 @@ messageForm.addEventListener('submit', (e) => {
   .then(data => {
     // console.log(data);
     const repositories = data;
-    console.log(repositories);
+    // console.log(repositories);
 
     const projectSection = document.getElementById('projects');
     const projectList = projectSection.querySelector('ul');
