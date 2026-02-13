@@ -148,6 +148,32 @@ strong {
     color: aquamarine;
 }
 
+#projects ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+#projects li {
+  background-color: #3b75a1;
+  padding: 10px 15px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+#projects li:hover, #projects li a:hover {
+  background-color: aquamarine;
+  color: darkolivegreen;
+  transform: scale(1.05);
+}
+
+#projects li a {
+    color:#edfcff;
+    text-decoration: none;
+}
+
 #connect ul {
     display: flex;
     gap: 10px;

@@ -83,4 +83,34 @@ messageForm.addEventListener('submit', (e) => {
   messageForm.reset();
 })
 
-// co
+//Getting my Github User name
+  const usernameURL = 'https://api.github.com/users/Eduaina/repos';
+
+  fetch(usernameURL)
+  .then(response => {
+    if(!response.ok) {
+      throw new Error(`Request failed, Fetch Error: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then(data => {
+    // console.log(data);
+    const repositories = data;
+    console.log(repositories);
+
+    const projectSection = document.getElementById('projects');
+    const projectList = projectSection.querySelector('ul');
+
+    for (let i = 0; i < repositories.length; i++) {
+      const project = document.createElement('li');
+      project.innerHTML = `<a href= ${repositories[i].homepage} target='_blank'> ${repositories[i].name} </a>`;
+      projectList.appendChild(project);
+    }
+  })
+  .catch(err => {
+    console.error('Error: ', err)
+  })
+
+
+  
+
