@@ -10,14 +10,23 @@
         <link rel="stylesheet" href="css/openapi.css">
     </head>
 <body>
-    <nav>
-        <ul> 
-            <li><a href="index.html">Home</a></li> 
-        </ul> 
-    </nav> 
 
+  <nav class="navigation">
+    <a href="index.html">Home</a>
+  </nav>
 
+  <main class="container">
+    <h1>Weather Dashboard</h1>
 
-    <script src="js/openapi.js"></script>
+    <div class="controls"></div>
+
+    <section id="displayArea">
+      <p>Select an option</p>
+    </section>
+
+    <section id="errorArea"></section>
+  </main>
+
+  <script src="/js/openapi.js"></script>
 </body>
 </html>
