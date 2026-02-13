@@ -294,6 +294,14 @@ button:active {
   font-size: 18px;
 }
 
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  border-top: 1px solid #59b596;
+}
+
+
 section:hover, footer:hover {
     border: 2px solid #59b596;
 }
