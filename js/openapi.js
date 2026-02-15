@@ -13,12 +13,12 @@ const errorArea = document.getElementById("errorArea");
 //GetTemp
 function getTemperature() {
     const temperatureURL = "https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true";
-  displayArea.innerHTML = "Loading temperature...";
+    displayArea.innerHTML = "Loading temperature...";
 
   fetch(temperatureURL)
     .then(response => {
       if (!response.ok) {
-        throw new Error("Network response was not ok");
+        throw new Error("Response Error");
     }
       return response.json();
     })
