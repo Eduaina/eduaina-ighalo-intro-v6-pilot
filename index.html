@@ -7,7 +7,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/index.css">
     </head>
 
@@ -26,28 +25,44 @@
         <main id="main">
             <h1>Eduaina Ighalo</h1>
             <section id="about">
-               <div id="abt1">
-                 <h2>About</h2>
-                    <p id="intro">Hi! I'm <strong><em>Eduaina!</em></strong> </p>
-                       <p> A <strong>Frontend developer</strong> currently <em>in training</em> with the Code the dream(CTD) program.</p>
-                    <p>I’m focused on building clean, responsive, and user-friendly web interfaces. 
-                        I’m currently developing my skills through interesting hands on projects and structured learning,
-                         with an emphasis on strong web fundamentals, readable code, and practical problem solving.
-                        I learn by building and turning concepts into working applications, 
-                        refining them through iteration, and steadily improving with each project. 
-                        My goal is to become a job-ready frontend developer and grow into fullstack development.</p>
+               <h2>About</h2>
+               <div class="about-container">
+                    <div id="abt1">
+                        <p id="intro">Hi! I'm <strong><em>Eduaina!</em></strong> </p>
+                        <p> A <strong>Frontend developer</strong> currently <em>in training</em> with the Code the dream(CTD) program.</p>
+                        <p>I’m focused on building clean, responsive, and user-friendly web interfaces. 
+                            I’m currently developing my skills through interesting hands on projects and structured learning,
+                            with an emphasis on strong web fundamentals, readable code, and practical problem solving.
+                            I learn by building and turning concepts into working applications, 
+                            refining them through iteration, and steadily improving with each project. 
+                            My goal is to become a job-ready frontend developer and grow into fullstack development.</p>
+                    </div>
+                    <div id="abt2">
+                        <img src="https://eduainacom.vercel.app/assets/images/siting.jpg" alt="A picture of Eduaina Ighalo" id="profile-pic">
+                    </div>
                </div>
-               <div id="abt2">
-                    <img src="https://eduainacom.vercel.app/assets/images/siting.jpg" alt="A picture of Eduaina Ighalo" id="profile-pic">
-                </div>
             </section>
 
             <section id="experience">
                 <h2>Experience</h2>
-                <nav id="experience-nav">
-                    <ul id="exp-ul">
-                        <li>Front-End Development (Project-Based Learning) <br>
-                            <em class="date">2024 – Present</em></li> <br>
+                <div id="experience-container">
+                    <div class="experience-block">
+                        <h3 class="exp-title">Code The Dream – Intro to Programming</h3>
+                        <p class="date"><em>Nov 2025 – Feb 2026 | Participant</em></p>
+                        <ul class="exp-ul">
+                        <li>Enrolled in an intensive introductory programming program</li>
+                        <li>strengthened core programming concepts including logic, control flow, and functions</li>
+                        <li>Built small projects and exercises to reinforce foundational JavaScript skills</li>
+                        <li>Developed consistency and discipline through structured weekly learning</li>
+                        <li>Using Git and GitHub for version control and project tracking</li>
+                        <li>Debugging, refactoring, and improving code quality through iteration</li>
+                    </ul>
+                    </div>
+
+                    <div class="experience">
+                        <h3 class="exp-title">Front-End Development (Project-Based Learning)</h3>
+                        <p class="date"><em>2024 – Present</em></p>
+                        <ul class="exp-ul">
                         <li>Building responsive layouts using HTML, CSS, Flexbox, and Grid</li>
                         <li>Creating interactive features with vanilla JavaScript</li>
                         <li>Learning React fundamentals: components, props, state, and hooks</li>
@@ -55,7 +70,20 @@
                         <li>Using Git and GitHub for version control and project tracking</li>
                         <li>Debugging, refactoring, and improving code quality through iteration</li>
                     </ul>
-                </nav>
+                    </div>
+ 
+                    <div class="experience">
+                        <h3 class="exp-title">Medical Representative</h3>
+                        <p class="date"><em>2022 – 2024</em></p>
+                        <ul class="exp-ul">
+                        <li>Built and maintained relationships with healthcare professionals</li>
+                        <li>Delivered persuasive product presentations and handled objections</li>
+                        <li>Managed client accounts and met monthly performance targets</li>
+                        <li>Analyzed market feedback and reported insights to management</li>
+                    </ul>
+                    </div>
+
+                </div>
             </section>
 
             <section id="skills">

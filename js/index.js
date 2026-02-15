@@ -29,8 +29,7 @@ const skills = [
     "Vite",
     "Browser DevTools",
     "Advanced JavaScript Concepts",
-    "React Best Practices",
-    "Backend Fundamentals"
+    "React Best Practices"
 ];
 
 const skillsSection = document.getElementById('skills');
@@ -103,7 +102,14 @@ messageForm.addEventListener('submit', (e) => {
 
     for (let i = 0; i < repositories.length; i++) {
       const project = document.createElement('li');
-      project.innerHTML = `<a href= ${repositories[i].homepage} target='_blank'> ${repositories[i].name} </a>`;
+      const projectLink = repositories[i].homepage || repositories[i].html_url;
+      const description = repositories[i].description || "No description provided";
+
+      project.innerHTML = `
+      <a href= ${projectLink} target='_blank'>
+      <h3>${repositories[i].name}</h3>
+      <p>${description}</p>
+      </a>`;
       projectList.appendChild(project);
     }
   })
